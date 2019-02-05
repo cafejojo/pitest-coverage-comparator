@@ -1,10 +1,7 @@
 failFast: true
 
 comments:
-    CommentOverPrivateFunction:
-        active: false
-    CommentOverPrivateProperty:
-        active: false
+    active: false
 
 complexity:
     ComplexMethod:
