@@ -1,0 +1,27 @@
+version: "{branch}.{build}"
+
+
+# Environment
+environment:
+    JAVA_HOME: C:\Program Files\Java\jdk1.8.0
+
+init:
+    - cmd: git config --global core.autocrlf true
+
+
+# Build
+build_script:
+    - cmd: gradlew assemble --no-parallel
+test_script:
+    - cmd: gradlew detektCheck --project-cache-dir=../schaapi-cache check --no-parallel
+
+
+# Caching
+cache: C:\Users\appveyor\.gradle
+
+
+# Skip commits
+skip_commits:
+    files:
+        - '*.md'
+        - .gitignore

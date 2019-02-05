@@ -1,0 +1,49 @@
+failFast: true
+
+comments:
+    CommentOverPrivateFunction:
+        active: false
+    CommentOverPrivateProperty:
+        active: false
+
+complexity:
+    ComplexMethod:
+        threshold: 16
+    TooManyFunctions:
+        thresholdInClasses: 16
+    StringLiteralDuplication:
+        active: false
+
+naming:
+    FunctionMaxLength:
+        active: false
+
+style:
+    DataClassContainsFunctions:
+        active: false
+    MandatoryBracesIfStatements:
+        active: false
+    ReturnCount:
+        active: false
+    UnnecessaryAbstractClass:
+        active: false
+    UnnecessaryApply:
+        active: false
+    UnusedPrivateMember:
+        active: false
+
+
+test-pattern:
+    active: true
+    patterns:
+        - ".*[/\\\\]test[/\\\\].*"
+    exclude-rule-sets:
+        - "comments"
+    exclude-rules:
+        - "LargeClass"
+        - "LateinitUsage"
+        - "MagicNumber"
+        - "MatchingDeclarationName"
+        - "NotImplementedDeclaration"
+        - "StringLiteralDuplication"
+        - "TooManyFunctions"
