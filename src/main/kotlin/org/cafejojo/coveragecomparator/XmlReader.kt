@@ -20,8 +20,8 @@ fun main(args: Array<String>) {
         """
         B kills ${coveredMutationsInBbutNotInA.count()} mutants that A does not cover.
 
-        A killed ${mutationsA.filter { it.killed() }.count()} mutants in total
-        B killed ${mutationsB.filter { it.killed() }.count()} mutants in total
+        A killed ${mutationsA.filter { it.killed() }.count()} out of ${mutationsA.count()} mutants
+        B killed ${mutationsB.filter { it.killed() }.count()} out of ${mutationsB.count()} mutants
         """.trimIndent()
     )
 }
